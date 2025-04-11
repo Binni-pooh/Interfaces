@@ -1,0 +1,67 @@
+body {
+    background: linear-gradient(135deg, #dbeeff, #6693ba);
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  #grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 4px;
+    max-width: 600px;
+    margin: 40px auto;
+  }
+  
+  .cell {
+    background-color: #ffffff; /* białe kafelki */
+    color: #1a237e; /* ciemny niebieski tekst */
+    border: 1px solid #64b5f6;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    width: 40px;
+    user-select: none;
+    border-radius: 6px;
+    
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .cell.selected {
+    background-color: #b3e5fc; /* zaznaczenie */
+  }
+  
+  .found {
+    background-color: #a5d6a7 !important; /* znalezione słowo */
+    color: #1b5e20;
+  }
+  
+  #statusText {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 18px;
+    color: #0d47a1;
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  .back-button {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background-color: #64b5f6;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .back-button:hover {
+    background-color: #42a5f5;
+  }
+  
