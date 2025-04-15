@@ -83,10 +83,10 @@ const gridData = [
   function checkWord() {
     const word = selectedText.toUpperCase();
     if (words.includes(word)) {
-      statusText.textContent = `✅ Знайдено слово: ${word}`;
+      //statusText.textContent = `✅ Знайдено слово: ${word}`;
       selectedCells.forEach(cell => cell.classList.add("found"));
     } else {
-      statusText.textContent = `❌ Неправильно: ${word}`;
+      //statusText.textContent = `❌ Неправильно: ${word}`;
       clearSelection();
     }
   }
