@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>Profil</title>
-  <link rel="stylesheet" href="uzytkownik.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <title>Profil</title>
+    <link rel="stylesheet" href="uzytkownik.css">
+    <script src="script.js" ></script>
 </head>
 <body>
-  <h2>Profil użytkownika</h2>
-  <div class="top-right-streak">
+<div class="top-right-streak">
     🔥 <span id="daysCount">0</span>
-  </div>
-  
-  <p>Email: <strong id="profileEmail"></strong></p>
-  <button onclick="logout()">Wyloguj się</button>
+</div>
 
-  <div class="bottom-nav">
+<div class="profile-box">
+    <h2>Profil użytkownika</h2>
+    <p>Email: <strong id="profileEmail"></strong></p>
+    <button onclick="logout()">Wyloguj się</button>
+</div>
+
+<div class="bottom-nav">
     <a href="index.html">📚</a>
-    <a href="gra.html">🎮</a>
+    <a href="filword.html">🎮</a>
     <a href="profil.html" class="active">👤</a>
-  </div>
+</div>
 
 
-  <script>
+<script>
     document.getElementById("profileEmail").textContent = localStorage.getItem("userEmail");
     document.getElementById("daysCount").textContent = getStreakDays();
 
     function logout() {
-      localStorage.clear();
-      window.location.href = "login.html";
+        localStorage.clear();
+        window.location.href = "login.html";
     }
-  </script>
+</script>
 </body>
-</html>.
+</html>
