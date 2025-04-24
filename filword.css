@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(135deg, #dbeeff, #6693ba);
+  background: linear-gradient(135deg, #E5F5FB, #A4C5EF);
     font-family: 'Rubik', sans-serif;
     margin: 0;
     padding: 20px;
@@ -51,7 +51,7 @@ body {
     display: block;
     margin: 30px auto;
     padding: 10px 20px;
-    background-color: #64b5f6;
+    background-color: #669ad9; /* ten sam kolor co górny */
     color: #ffffff;
     border: none;
     border-radius: 6px;
