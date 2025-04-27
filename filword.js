@@ -13,7 +13,7 @@ const gridData = [
     ["У","Ч","И","Т","Е","Л","Ь","А","А","М","Н","Н"],
   ];
   
-  const words = ["КОТ", "МАМА", "ЯБЛОКО", "ДОМ", "ШКОЛА", "СОБАКА", "КНИГА", "ОКНО", "ВОДА", "УЧИТЕЛЬ"];
+  const words = ["КОТ", "МАМА", "ЯБЛОКО", "ДОМ", "ШКОЛА", "СОБАКА", "КНИГА", "ОКНО", "ВОДА", "УЧИТЕЛЬ", "ЛАНДЫШ"];
   
   const gridElement = document.getElementById("grid");
   const statusText = document.getElementById("statusText");
