@@ -1,0 +1,295 @@
+/* Загальні стилі для всього сайту */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #E5F5FB, #A4C5EF);
+    background-attachment: fixed;
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: none;
+  }
+  
+  .top-bar h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #000;
+  }
+  
+  .settings-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Кафельні елементи для тем */
+  .tematy-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+  
+  .temat-kafel {
+    background-color: #ffffff;
+    padding: 16px 20px;
+    border-radius: 16px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .temat-kafel:hover {
+    background-color: #f0f9ff;
+  }
+  
+  .temat-kafel .emoji {
+    margin-right: 12px;
+    font-size: 24px;
+  }
+  
+  main {
+    padding-bottom: 70px; /* Встановлюємо відступ знизу, враховуючи висоту нижньої навігації */
+  }
+  
+  /* Нижня навігація */
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #669ad9;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .bottom-nav a {
+    font-size: 26px;
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .bottom-nav a.active {
+    font-weight: bold;
+    color: #1e40af;
+  }
+  
+  /* Лічильник */
+  .top-right-streak {
+    position: fixed;
+    top: 12px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 6px 12px;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-weight: 500;
+    z-index: 1000;
+  }
+
+  .theory {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: transparent; /* або білий, якщо хочеш фон */
+    font-size: 18px;
+    line-height: 1.8;
+    color: #1a1a1a;
+    text-align: justify;
+}
+  
+  /* Спільні стилі для тексту в темах */
+  .tekst {
+    padding: 20px;
+    line-height: 1.8; /* Трохи збільшений міжрядковий інтервал для легкого читання */
+    font-size: 18px; /* Трохи більший текст для кращої видимості */
+    color: #1a1a1a;
+    text-align: justify; /* Вирівнювання тексту по ширині */
+}
+
+.tekst p {
+    margin-bottom: 16px; /* Відступ після кожного абзацу */
+    text-indent: 30px; /* Відступ першого рядка абзацу */
+}
+
+.tekst h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #1e40af;
+}
+
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+  }
+  
+  table tbody tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  /* Секція з практичним завданням */
+  .practice {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .practice h2 {
+    margin-bottom: 16px;
+    color: #1e40af;
+  }
+  
+  /* Кожне завдання */
+  .task-item {
+    margin-bottom: 15px;
+  }
+  
+  /* Стиль інпутів */
+  .task-item input[type="text"] {
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    padding: 8px 12px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    width: 200px;
+    margin-left: 6px;
+  }
+  
+  /* При правильній відповіді */
+  .task-item input[type="text"].correct {
+    border: 3px solid #00FF00;
+    box-shadow: 0 0 10px #00FF00;
+  }
+  
+  /* При неправильній відповіді */
+  .task-item input[type="text"].incorrect {
+    border: 3px solid red;
+    box-shadow: 0 0 10px red;
+  }
+  
+  /* Кнопка перевірки */
+  .practice button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #1e40af;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+  }
+  
+  .practice button:hover {
+    background-color: #3b82f6;
+  }
+  
+  .next-topic1 {
+    text-align: right;
+    margin: 40px 20px 0 0; /* відступи: верх 40px, правий 20px, низ 0, лівий 0 */
+}
+
+.next-button1 {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #1e40af;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.next-button1:hover {
+    background-color: #3749db;
+}
+
+.topics-container {
+  display: flex;
+  justify-content: space-between; /* Розподіляє кнопки по краях */
+  align-items: center; /* Вирівнює кнопки по вертикалі */
+  margin: 20px;
+}
+
+.prev-topic, .next-topic {
+  margin: 0; /* Прибираємо відступи з боків */
+}
+
+.prev-button, .next-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #1e40af;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.prev-button:hover, .next-button:hover {
+  background-color: #3749db;
+}
+
+.matching-game {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 50px;
+}
+
+.words, .translations {
+  width: 45%;
+}
+
+.word, .translation {
+  background-color: #f1f5f9;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  cursor: grab;
+  text-align: center;
+}
+
+.word {
+  min-height: 15px;
+  border: 2px dashed #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: green;
+}
+
