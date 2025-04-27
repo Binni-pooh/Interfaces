@@ -256,3 +256,40 @@ body {
 .prev-button:hover, .next-button:hover {
   background-color: #3749db;
 }
+
+.matching-game {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 50px;
+}
+
+.words, .translations {
+  width: 45%;
+}
+
+.word, .translation {
+  background-color: #f1f5f9;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  cursor: grab;
+  text-align: center;
+}
+
+.word {
+  min-height: 15px;
+  border: 2px dashed #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: green;
+}
+

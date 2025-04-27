@@ -63,7 +63,18 @@ const correctAnswers = {
     task11_38: "Рыба",
     task11_39: "Собака",
     task11_40: "Львица",
-    task11_41: "Корова"
+    task11_41: "Корова",
+
+    task31_1: "тусовка",        // Відповідь до першого пропуску
+    task31_2: "бабок",          // Відповідь до другого пропуску
+    task31_3: "ладно",          // Відповідь до третього пропуску
+    task31_4: "пофиг",          // Відповідь до четвертого пропуску
+    task31_5: "отпад",          // Відповідь до п'ятого пропуску
+    task31_6: "заморачивайся",  // Відповідь до шостого пропуску
+    task31_7: "прикол",         // Відповідь до сьомого пропуску
+    task31_8: "жрал",           // Відповідь до восьмого пропуску
+    task31_9: "девчонка",       // Відповідь до дев'ятого пропуску
+    task31_10: "чувак"   
   };
   
   function checkAnswers(taskIds) {
@@ -88,4 +99,44 @@ const correctAnswers = {
   
     alert(`Правильных ответов: ${correctCount} из ${taskIds.length}`);
   }
+  const translations = document.querySelectorAll('.translation');
+const words = document.querySelectorAll('.word');
+let draggedItem = null;
+
+// Коли починаємо перетягувати
+translations.forEach(item => {
+    item.addEventListener('dragstart', function (e) {
+        draggedItem = item;
+    });
+});
+
+// Коли перетягуємо над словом
+words.forEach(word => {
+    word.addEventListener('dragover', function (e) {
+        e.preventDefault();
+    });
+
+    word.addEventListener('drop', function (e) {
+        e.preventDefault();
+        if (draggedItem) {
+            // Перевірка чи правильно
+            if (draggedItem.textContent === word.getAttribute('data-match')) {
+                word.appendChild(draggedItem);
+                draggedItem.setAttribute('draggable', 'false');
+                draggedItem.style.backgroundColor = '#4ade80'; // Зелений колір якщо правильно
+                checkWin();
+            } else {
+                draggedItem.style.backgroundColor = '#f87171'; // Червоний колір якщо неправильно
+            }
+        }
+    });
+});
+
+function checkWin() {
+    const matched = document.querySelectorAll('.word .translation').length;
+    if (matched === 10) {
+        document.getElementById('result').textContent = '🎉 Молодец! Все правильно!';
+    }
+}
+
   
