@@ -102,26 +102,38 @@ body {
     font-weight: 500;
     z-index: 1000;
   }
+
+  .theory {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: transparent; /* або білий, якщо хочеш фон */
+    font-size: 18px;
+    line-height: 1.8;
+    color: #1a1a1a;
+    text-align: justify;
+}
   
   /* Спільні стилі для тексту в темах */
   .tekst {
     padding: 20px;
-    line-height: 1.6;
-    font-size: 17px;
+    line-height: 1.8; /* Трохи збільшений міжрядковий інтервал для легкого читання */
+    font-size: 18px; /* Трохи більший текст для кращої видимості */
     color: #1a1a1a;
-  }
-  
-  .tekst h3 {
-    margin-top: 24px;
+    text-align: justify; /* Вирівнювання тексту по ширині */
+}
+
+.tekst p {
+    margin-bottom: 16px; /* Відступ після кожного абзацу */
+    text-indent: 30px; /* Відступ першого рядка абзацу */
+}
+
+.tekst h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
     color: #1e40af;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
+}
+
   table, th, td {
     border: 1px solid #ddd;
   }
@@ -199,3 +211,48 @@ body {
     background-color: #3b82f6;
   }
   
+  .next-topic1 {
+    text-align: right;
+    margin: 40px 20px 0 0; /* відступи: верх 40px, правий 20px, низ 0, лівий 0 */
+}
+
+.next-button1 {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #1e40af;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.next-button1:hover {
+    background-color: #3749db;
+}
+
+.topics-container {
+  display: flex;
+  justify-content: space-between; /* Розподіляє кнопки по краях */
+  align-items: center; /* Вирівнює кнопки по вертикалі */
+  margin: 20px;
+}
+
+.prev-topic, .next-topic {
+  margin: 0; /* Прибираємо відступи з боків */
+}
+
+.prev-button, .next-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #1e40af;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.prev-button:hover, .next-button:hover {
+  background-color: #3749db;
+}
