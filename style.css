@@ -44,12 +44,29 @@ body {
   padding: 16px 20px;
   border-radius: 16px;
   font-size: 18px;
+  justify-content: space-between;
   display: flex;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   cursor: pointer;
   transition: 0.2s;
 }
+
+.temat-title {
+  display: flex;
+  align-items: center;
+}
+
+.favorite-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.favorite-btn.active {
+  color: red;  /* Змінюємо колір серця на червоний */
+}
+
 
 .temat-kafel:hover {
   background-color: #f0f9ff;
@@ -98,3 +115,6 @@ body {
   font-weight: 500;
   z-index: 1000;
 }
+
+
+

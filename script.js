@@ -1,8 +1,47 @@
-function toggleFavorite(btn) {
-    btn.classList.toggle("active");
-    btn.textContent = btn.classList.contains("active") ? "❤️" : "🤍";
+// Функція для додавання/видалення теми з улюблених
+function toggleFavorite(btn, topicUrl) {
+  // Перемикаємо клас 'active' для кнопки серця
+  btn.classList.toggle("active");
+  btn.textContent = btn.classList.contains("active") ? "❤️" : "🤍";  // Змінюємо іконку серця
+
+  let favorites = JSON.parse(localStorage.getItem("favorites")) || [];  // Отримуємо список улюблених тем
+
+  if (btn.classList.contains("active")) {
+    if (!favorites.includes(topicUrl)) {
+      favorites.push(topicUrl);  // Додаємо тему в список улюблених
+      localStorage.setItem("favorites", JSON.stringify(favorites));  // Оновлюємо локальне сховище
+    }
+  } else {
+    favorites = favorites.filter(item => item !== topicUrl);  // Видаляємо тему з улюблених
+    localStorage.setItem("favorites", JSON.stringify(favorites));  // Оновлюємо локальне сховище
   }
+}
+
+// Відображення статусу теми в улюблених при завантаженні сторінки
+document.addEventListener("DOMContentLoaded", () => {
+  const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
   
+  // Отримуємо всі кнопки сердець на сторінці
+  const favoriteBtns = document.querySelectorAll(".favorite-btn");
+  
+  favoriteBtns.forEach(btn => {
+    const topicUrl = btn.getAttribute("onclick").match(/'([^']+)'/)[1];  // Отримуємо URL теми з атрибута onclick
+    if (favorites.includes(topicUrl)) {
+      btn.classList.add("active");
+      btn.textContent = "❤️";  // Встановлюємо активне серце
+    }
+
+    // Додаємо обробник для кнопки серця
+    btn.onclick = (event) => {
+      toggleFavorite(btn, topicUrl);  // Викликаємо функцію для додавання/видалення з улюблених
+      event.stopPropagation();  // Зупиняємо поширення події, щоб не спрацював клік на всю тему
+    };
+  });
+});
+
+
+
+
   function updateProgress() {
     const total = 7; // całkowita liczba tematów (możesz to dynamicznie zmieniać)
     const learned = 2; // liczba zakończonych tematów (też możesz zrobić dynamicznie)
@@ -39,4 +78,6 @@ function toggleFavorite(btn) {
     // Ustawienie paska postępu
     updateProgress();
   });
+
+
   
