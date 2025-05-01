@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="temat.css"> <!-- підключення ваших стилів -->
+    <script src="temat.js" defer></script>
+    <title>Сложное спряжение глаголов</title>
+</head>
+<body>
+    <div class="top-bar">
+        <h1>Сложное спряжение глаголов</h1>
+    </div>
+    <main>
+        <div class="theory">
+            <p>В русском языке глаголы изменяются по лицам и числам. Это называется спряжением.</p>
+            <h3>Всего есть два типа спряжения:</h3>
+            <h4>I спряжение</h4>
+            <p>Глаголы, которые в форме 3-го лица единственного числа оканчиваются на -ет / -ёт</p>
+            <ul>
+                <li>читать → он читает</li>
+                <li>строить → он строит</li>
+                <li>рисовать → он рисует</li>
+                <li>петь → он поёт</li>
+                <li>дарить → он дарит</li>
+            </ul>
+            <h4>II спряжение</h4>
+            <p>Глаголы, которые в форме 3-го лица единственного числа оканчиваются на -ит</p>
+            <ul>
+                <li>говорить → он говорит</li>
+                <li>спать → он спит</li>
+                <li>видеть → он видит</li>
+                <li>носить → он носит</li>
+            </ul>
+        </div>
+        <div class="block">
+            <h2>✳️ Примеры:</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Ошибка</th>
+                  <th>Правильно</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Он подаривает ❌	</td>
+                  <td>Он дарит ✅</td>
+                </tr>
+                <tr>
+                  <td>Я рисиваю ❌</td>
+                  <td>Я рисую ✅</td>
+                </tr>
+                <tr>
+                  <td>Мы смотряем ❌</td>
+                  <td>Мы смотрим ✅</td>
+                </tr>
+                <tr>
+                  <td>Он говоряет ❌</td>
+                  <td>Он говорит ✅</td>
+                </tr>
+                <tr>
+                    <td>Ты строяешь ❌</td>
+                    <td>Ты строишь ✅</td>
+                </tr>
+                <tr>
+                    <td>Она певаёт ❌</td>
+                    <td>Она поёт ✅</td>
+                </tr>
+                <tr>
+                    <td>Мы просыпаим ❌</td>
+                    <td>Мы просыпаемся ✅</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <section class="practice">
+            <h3>Задание 1.</h3>
+            <p>Найди и исправь ошибку в глаголе. Запиши правильный вариант.</p>
+            <form id="practiceForm">
+                <div class="task-item">
+                    <label>Онa<input type="text" id="task51_1" placeholder="подаривает">всем подарки.</label>
+                </div>
+                <div class="task-item">
+                    <label>Мы <input type="text" id="task51_2" placeholder="смотряем">новый фильм.</label>
+                </div>
+                <div class="task-item">
+                    <label>Он <input type="text" id="task51_3" placeholder="говоряет">по-французски.</label>
+                </div>
+                <div class="task-item">
+                    <label>Я<input type="text" id="task51_4" placeholder="рисиваю">каждый день.</label>
+                </div>
+                <div class="task-item">
+                    <label>Ты<input type="text" id="task51_5" placeholder="строяешь">красивые дома.</label>
+                </div>
+                <div class="task-item">
+                    <label>Они<input type="text" id="task51_6" placeholder="даряют">игрушки детям.</label>
+                </div>
+                <div class="task-item">
+                    <label>Он сидит и<input type="text" id="task51_7" placeholder="певаёт">песню.</label>
+                </div>
+                <div class="task-item">
+                    <label>Мы спим и<input type="text" id="task51_8" placeholder="просыпаим">рано.</label>
+                </div>
+            </form>
+            <button onclick="checkAnswers([
+        'task51_1', 'task51_2', 'tas51_3', 'task51_4', 'task51_5', 'task51_6', 'task51_7', 'task51_8'
+      ])">Проверить</button>
+      <h3>Задание 2</h3>
+      <p>Вставь правильную форму глагола.</p>
+      <form id="practiceForm">
+        <div class="task-item">
+            <label>Я<input type="text" id="task52_1" placeholder="дарить">тебе цветы.</label>
+        </div>
+        <div class="task-item">
+            <label>Он<input type="text" id="task52_2" placeholder="говорить">громко.</label>
+        </div>
+        <div class="task-item">
+            <label>Мы<input type="text" id="task52_3" placeholder="смотреть">сериал</label>
+        </div>
+        <div class="task-item">
+            <label>Ты<input type="text" id="task52_4" placeholder="рисовать">красиво.</label>
+        </div>
+        <div class="task-item">
+            <label>Они<input type="text" id="task52_5" placeholder="строить">дома.</label>
+        </div>
+        <div class="task-item">
+            <label>Она<input type="text" id="task52_6" placeholder="петь">песню.</label>
+        </div>
+        <div class="task-item">
+            <label>Вы<input type="text" id="task52_7" placeholder="спать">допоздна.</label>
+        </div>
+        <div class="task-item">
+            <label>Он<input type="text" id="task52_8" placeholder="читать">книгу.</label>
+        </div>
+      </form>
+      <button onclick="checkAnswers([
+        'task52_1', 'task52_2', 'tas52_3', 'task52_4', 'task52_5', 'task52_6', 'task52_7', 'task52_8'
+      ])">Проверить</button>
+    </section>
+    </main>
+    
+</body>
+</html>
