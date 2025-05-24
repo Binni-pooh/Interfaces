@@ -6,6 +6,7 @@
   <title>Tematy</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+  <script src="ulubione.js" defer></script> <!-- Підключаємо JS для ulubione -->
 </head>
 <body class="home">
     <div class="top-right-streak">
@@ -17,88 +18,129 @@
   </header>
 
   <!-- Lista tematów -->
-  <main class="tematy-container">
-    
+   <main class="tematy-container">
+
     <div class="temat-kafel">
       <div onclick="location.href='temat1.html'" class="temat-title">
-        <span class="emoji">📘</span> «русский» и «российский»
+        <span class="emoji">📘</span> русский vs российский
       </div>
-      <button class="favorite-btn" onclick="toggleFavorite(this, 'temat1.html'); event.stopPropagation()">🤍</button>
+      <button
+        class="favorite-btn"
+        data-url="temat1.html"
+        data-title="русский vs российский"
+      >🤍</button>
     </div>
+
     <div class="temat-kafel">
       <div onclick="location.href='temat2.html'" class="temat-title">
         <span class="emoji">📘</span> Названия животных (самка, самец, детёныш)
       </div>
-      <button class="favorite-btn" onclick="toggleFavorite(this, 'temat2.html'); event.stopPropagation()">🤍</button>
+      <button
+        class="favorite-btn"
+        data-url="temat2.html"
+        data-title="Названия животных (самка, самец, детёныш)"
+      >🤍</button>
     </div>
-    
+
     <div class="temat-kafel">
       <div onclick="location.href='temat3.html'" class="temat-title">
         <span class="emoji">📘</span> Разговорные слова в русском языке
       </div>
-      <button class="favorite-btn" onclick="toggleFavorite(this, 'temat3.html'); event.stopPropagation()">🤍</button>
+      <button
+        class="favorite-btn"
+        data-url="temat3.html"
+        data-title="Разговорные слова в русском языке"
+      >🤍</button>
     </div>
-    
+
     <div class="temat-kafel">
       <div onclick="location.href='temat4.html'" class="temat-title">
         <span class="emoji">📘</span> Фразеологизмы
       </div>
-      <button class="favorite-btn" onclick="toggleFavorite(this, 'temat4.html'); event.stopPropagation()">🤍</button>
+      <button
+        class="favorite-btn"
+        data-url="temat4.html"
+        data-title="Фразеологизмы"
+      >🤍</button>
     </div>
-    
+
     <div class="temat-kafel">
       <div onclick="location.href='temat5.html'" class="temat-title">
         <span class="emoji">📘</span> Сложное спряжение глаголов
       </div>
-      <button class="favorite-btn" onclick="toggleFavorite(this, 'temat5.html'); event.stopPropagation()">🤍</button>
+      <button
+        class="favorite-btn"
+        data-url="temat5.html"
+        data-title="Сложное спряжение глаголов"
+      >🤍</button>
     </div>
-    
+
     <div class="temat-kafel">
       <div onclick="location.href='temat6.html'" class="temat-title">
-        <span class="emoji">📘</span> Разница между словами: "считать", "рассчитывать" и "считаться" 
+        <span class="emoji">📘</span> Разница между словами: "считать", "рассчитывать" и "считаться"
       </div>
-      <button class="favorite-btn" onclick="toggleFavorite(this, 'temat6.html'); event.stopPropagation()">🤍</button>
+      <button
+        class="favorite-btn"
+        data-url="temat6.html"
+        data-title="Разница между словами: &quot;считать&quot;, &quot;рассчитывать&quot; и &quot;считаться&quot;"
+      >🤍</button>
     </div>
-    
+
     <div class="temat-kafel">
       <div onclick="location.href='temat7.html'" class="temat-title">
         <span class="emoji">📘</span> Разница между "класть", "положить", "ложиться", "лежать" и "положиться"
       </div>
-      <button class="favorite-btn" onclick="toggleFavorite(this, 'temat7.html'); event.stopPropagation()">🤍</button>
+      <button
+        class="favorite-btn"
+        data-url="temat7.html"
+        data-title="Разница между &quot;класть&quot;, &quot;положить&quot;, &quot;ложиться&quot;, &quot;лежать&quot; и &quot;положиться&quot;"
+      >🤍</button>
     </div>
-    
+
     <div class="temat-kafel">
       <div onclick="location.href='temat8.html'" class="temat-title">
         <span class="emoji">📘</span> Разница между "приходить", "приходиться", "уходить", "уходиться", "проходить", "проходиться"
       </div>
-      <button class="favorite-btn" onclick="toggleFavorite(this, 'temat8.html'); event.stopPropagation()">🤍</button>
+      <button
+        class="favorite-btn"
+        data-url="temat8.html"
+        data-title="Разница между &quot;приходить&quot;, &quot;приходиться&quot;, &quot;уходить&quot;, &quot;уходиться&quot;, &quot;проходить&quot;, &quot;проходиться&quot;"
+      >🤍</button>
     </div>
-    
+
     <div class="temat-kafel">
       <div onclick="location.href='temat9.html'" class="temat-title">
         <span class="emoji">📘</span> Слова-паразиты и их нейтральные замены
       </div>
-      <button class="favorite-btn" onclick="toggleFavorite(this, 'temat9.html'); event.stopPropagation()">🤍</button>
+      <button
+        class="favorite-btn"
+        data-url="temat9.html"
+        data-title="Слова-паразиты и их нейтральные замены"
+      >🤍</button>
     </div>
-    
+
     <div class="temat-kafel">
       <div onclick="location.href='temat10.html'" class="temat-title">
         <span class="emoji">📘</span> Разница между "вести", "повести", "поведение", "водитель", "проводник", "заведение"
       </div>
-      <button class="favorite-btn" onclick="toggleFavorite(this, 'temat10.html'); event.stopPropagation()">🤍</button>
+      <button
+        class="favorite-btn"
+        data-url="temat10.html"
+        data-title="Разница между &quot;вести&quot;, &quot;повести&quot;, &quot;поведение&quot;, &quot;водитель&quot;, &quot;проводник&quot;, &quot;заведение&quot;"
+      >🤍</button>
     </div>
-    
 
-  
   </main>
 
   <!-- Dolna nawigacja -->
-  <nav class="bottom-nav">
-    <a href="index.html" class="active">🏠</a>
-    <a href="filword.html">🎮</a>
-    <a href="profil.html">👤</a>
-    <a href="ulubione.html">❤️</a>
-  </nav>
+<nav class="bottom-nav">
+  <a href="index.html">🏠</a>
+  <a href="filword.html">🎮</a>
+  <a href="profil.html">👤</a>
+  <a href="ulubione.html">❤️</a>
+</nav>
+
+
   
 </body>
 </html>
