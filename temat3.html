@@ -129,26 +129,11 @@
 
 </main>
 
-<nav class="bottom-nav">
-  <a href="index.html">🏠</a>
-  <a href="filword.html">🎮</a>
-  <a href="profil.html">👤</a>
-  <a href="ulubione.html">❤️</a>
-</nav>
-<script>
-  const links = document.querySelectorAll('.bottom-nav a');
-  const currentPage = window.location.pathname.split('/').pop();
-
-  links.forEach(link => {
-    if (link.getAttribute('href') === currentPage) {
-      link.classList.add('active');
-    }
-  });
-</script>
-
-
-
-
+<div class="bottom-nav">
+    <a href="index.html" class="active">📚</a>
+    <a href="filword.html">🎮</a>
+    <a href="profil.html">👤</a>
+  </div>
 
 </body>
 </html>

@@ -78,19 +78,16 @@ body {
     border-top-right-radius: 20px;
   }
   
- .bottom-nav a {
-  font-size: 26px;
-  color: #000;
-  text-decoration: none;
-  transition: transform 0.3s ease, font-size 0.3s ease;
-}
-
-.bottom-nav a.active {
-  font-size: 50px;         /* Збільшуємо розмір */
-  transform: scale(1.2);   /* М'яке масштабування */
-  font-weight: bold;
-  color: #1e40af;          /* Інший колір */
-}
+  .bottom-nav a {
+    font-size: 26px;
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .bottom-nav a.active {
+    font-weight: bold;
+    color: #1e40af;
+  }
   
   /* Лічильник */
   .top-right-streak {
@@ -277,29 +274,15 @@ body {
   margin: 8px 0;
   border-radius: 8px;
   cursor: grab;
-
-  /* Однаковий розмір */
-  width: 100%;
-  height: 50px;
-  box-sizing: border-box;
-
-  /* Центрування тексту */
-  display: flex;
-  justify-content: center; /* по горизонталі */
-  align-items: center;     /* по вертикалі */
-
-  font-size: 18px;
-  user-select: none;
+  text-align: center;
 }
-
 
 .word {
+  min-height: 15px;
   border: 2px dashed #94a3b8;
-}
-
-/* Уникаємо зміни розміру при дропі */
-.translation {
-  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #result {

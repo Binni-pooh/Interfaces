@@ -17,12 +17,13 @@
     <button onclick="logout()">Wyloguj się</button>
 </div>
 
-<nav class="bottom-nav">
-  <a href="index.html">🏠</a>
-  <a href="filword.html">🎮</a>
-  <a href="profil.html">👤</a>
-  <a href="ulubione.html">❤️</a>
-</nav>
+<div class="bottom-nav">
+    <a href="index.html">📚</a>
+    <a href="filword.html">🎮</a>
+    <a href="profil.html" class="active">👤</a>
+</div>
+
+
 <script>
     document.getElementById("profileEmail").textContent = localStorage.getItem("userEmail");
     document.getElementById("daysCount").textContent = getStreakDays();
@@ -31,7 +32,6 @@
         localStorage.clear();
         window.location.href = "login.html";
     }
-  
 </script>
 </body>
 </html>

@@ -47,32 +47,21 @@ body {
     font-family: 'Rubik', sans-serif;
   }
   
-
-  .bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #669ad9; /* ten sam kolor co górny */
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 60px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
-.bottom-nav a {
-  font-size: 26px;
-  color: #000;
-  text-decoration: none;
-  transition: transform 0.3s ease, font-size 0.3s ease;
-}
-
-.bottom-nav a.active {
-  font-size: 50px;         /* Збільшуємо розмір */
-  transform: scale(1.2);   /* М'яке масштабування */
-  font-weight: bold;
-  color: #1e40af;          /* Інший колір */
-}
+  .back-button {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background-color: #669ad9; /* ten sam kolor co górny */
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .back-button:hover {
+    background-color: #42a5f5;
+  }
   

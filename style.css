@@ -96,14 +96,11 @@ body {
   font-size: 26px;
   color: #000;
   text-decoration: none;
-  transition: transform 0.3s ease, font-size 0.3s ease;
 }
 
 .bottom-nav a.active {
-  font-size: 50px;         /* Збільшуємо розмір */
-  transform: scale(1.2);   /* М'яке масштабування */
   font-weight: bold;
-  color: #1e40af;          /* Інший колір */
+  color: #1e40af;
 }
 
 .top-right-streak {

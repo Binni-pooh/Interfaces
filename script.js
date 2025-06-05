@@ -78,15 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Ustawienie paska postępu
     updateProgress();
   });
-  const links = document.querySelectorAll('.bottom-nav a');
-  const currentPath = window.location.pathname;
-
-  links.forEach(link => {
-    const linkPath = new URL(link.href).pathname;
-    if (currentPath.endsWith(linkPath)) {
-      link.classList.add('active');
-    }
-  });
 
 
   
