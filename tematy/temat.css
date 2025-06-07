@@ -2,9 +2,8 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #E5F5FB, #A4C5EF);
-    background-attachment: fixed;
-  }
+    background: linear-gradient(135deg, #E5F5FB, #A4C5EF) fixed;
+}
   
   .top-bar {
     display: flex;
@@ -115,7 +114,7 @@ body {
 }
   
   /* Спільні стилі для тексту в темах */
-  .tekst {
+.tekst {
     padding: 20px;
     line-height: 1.8; /* Трохи збільшений міжрядковий інтервал для легкого читання */
     font-size: 18px; /* Трохи більший текст для кращої видимості */
@@ -195,7 +194,7 @@ body {
   }
   
   /* Кнопка перевірки */
-  .practice button {
+.practice button {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #1e40af;
@@ -270,7 +269,7 @@ body {
 
 .word, .translation {
   background-color: #f1f5f9;
-  padding: 12px;
+  padding: 10px;
   margin: 8px 0;
   border-radius: 8px;
   cursor: grab;

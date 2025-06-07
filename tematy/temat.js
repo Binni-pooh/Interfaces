@@ -160,7 +160,7 @@ const correctAnswers = {
 
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('go-home').addEventListener('click', () => {
-        window.location.href = "index.html";
+        window.location.href = "../index.html";
     });
 });
 
@@ -263,6 +263,7 @@ words.forEach(word => {
                 word.appendChild(draggedItem);
                 draggedItem.setAttribute('draggable', 'false');
                 draggedItem.style.backgroundColor = '#4ade80'; // Зелений колір якщо правильно
+                draggedItem.style.margin = '0px'
                 checkWin();
             } else {
                 draggedItem.style.backgroundColor = '#f87171'; // Червоний колір якщо неправильно

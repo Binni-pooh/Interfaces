@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Филворд – Игра</title>
-  <link rel="stylesheet" href="filword.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Филворд – Игра</title>
+    <link rel="stylesheet" href="filword.css" />
 </head>
 <body>
-  <h1>Филворд: Найди слова</h1>
-  <div id="grid"></div>
-  <div id="statusText"></div>
-  <a class="back-button" href="index.html">⬅ Назад</a>
+    <div class="top-right-streak">
+        🔥 <span id="daysCount">0</span>
+    </div>
 
-  <!-- Łączymy osobny plik JS -->
-  <script src="filword.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const navLinks = document.querySelectorAll('.bottom-nav a');
-      const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    <h1>Филворд: Найди слова</h1>
+    <div id="grid"></div>
+    <div id="statusText"></div>
+    <nav class="bottom-nav">
+        <a href="index.html" >🏠</a>
+        <a href="filword.html" class="active">🎮</a>
+        <a href="profil.html">👤</a>
+        <a href="ulubione.html">❤️</a>
+    </nav>
 
-      navLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        if (href === currentPath) {
-          link.classList.add('active');
+    <!-- Łączymy osobny plik JS -->
+    <script src="filword.js"></script>
+    <script>
+        function getStreakDays() {
+            let firstDay = localStorage.getItem("firstDay");
+            if (!firstDay) {
+                const today = new Date().toISOString().split("T")[0];
+                localStorage.setItem("firstDay", today);
+                return 1;
+            }
+            const today = new Date();
+            const start = new Date(firstDay);
+            return Math.floor((today - start) / (1000 * 60 * 60 * 24)) + 1;
         }
 
-        link.addEventListener('click', () => {
-          navLinks.forEach(l => l.classList.remove('active'));
-          link.classList.add('active');
+        document.addEventListener('DOMContentLoaded', () => {
+            // Ustaw liczbę dni (streak)
+            const streakEl = document.getElementById("daysCount");
+            if (streakEl) {
+                streakEl.textContent = getStreakDays();
+            }
         });
-      });
-    });
 
-  </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const navLinks = document.querySelectorAll('.bottom-nav a');
-      const currentPath = window.location.pathname.split('filword.html').pop().toLowerCase();
+    </script>
 
-      navLinks.forEach(link => {
-        const href = link.getAttribute('href').toLowerCase();
-        if (href === currentPath) {
-          link.classList.add('active');
-        }
-      });
-    });
-  </script>
 </body>
 </html>

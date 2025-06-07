@@ -1,8 +1,8 @@
 body {
   background: linear-gradient(135deg, #E5F5FB, #A4C5EF);
     font-family: 'Rubik', sans-serif;
-    margin: 0;
-    padding: 20px;
+    margin: 0 0 60px 0;
+    padding: 0 20px;
   }
   
   #grid {
@@ -10,7 +10,8 @@ body {
     grid-template-columns: repeat(12, 1fr);
     gap: 4px;
     max-width: 600px;
-    margin: 40px auto;
+    margin: 10px auto;
+    padding: 10px;
   }
   
   .cell {
@@ -68,22 +69,36 @@ body {
 .bottom-nav {
   position: fixed;
   bottom: 0;
-  width: 100%;
-  background-color: #fff;
+  left: 0;
+  right: 0;
+  background-color: #669ad9; /* ten sam kolor co górny */
   display: flex;
   justify-content: space-around;
-  padding: 10px 0;
-  border-top: 1px solid #ccc;
+  align-items: center;
+  height: 60px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .bottom-nav a {
   font-size: 26px;
-  color: black;
+  color: #000;
   text-decoration: none;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
 .bottom-nav a.active {
-  transform: scale(2); /* POWIĘKSZENIE aktywnej ikony */
-  color: #007bff;      /* Opcjonalnie: niebieski kolor dla aktywnej */
+  transform: scale(2); /* Powiększenie */
+  color: #1e40af; /* Kolor po aktywacji */
+}
+
+.top-right-streak {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 6px 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }

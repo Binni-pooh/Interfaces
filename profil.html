@@ -54,28 +54,7 @@
             streakEl.textContent = getStreakDays();
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const navLinks = document.querySelectorAll('.bottom-nav a');
-            const currentPath = window.location.pathname.split('/').pop().toLowerCase();
-
-            navLinks.forEach(link => {
-                const href = link.getAttribute('href').toLowerCase();
-                if (href === currentPath) {
-                    link.classList.add('active'); // tylko na aktualnej stronie
-                }
-            });
-
-            // Ustaw dane profilu
-            const emailEl = document.getElementById("profileEmail");
-            if (emailEl) {
-                emailEl.textContent = localStorage.getItem("userEmail") || "Brak";
-            }
-
-            const streakEl = document.getElementById("daysCount");
-            if (streakEl) {
-                streakEl.textContent = getStreakDays();
-            }
-        });
+    })
 </script>
 </body>
 </html>
