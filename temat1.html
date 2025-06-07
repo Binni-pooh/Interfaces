@@ -7,15 +7,12 @@
   <script src="temat.js" defer></script>
 </head>
 <body>
+<button id="go-home" class="go-home-btn">🏠 Powrót na stronę główną</button>
   <div class="top-bar">
     <h1>Temat 1</h1>
-    <div class="top-right-streak">
-      🔥 <span id="daysCount">0</span>
-    </div>
   </div>
-
   <main class="content">
-    <div class="theory"
+    <div class="theory">
     <p>Слова «<strong>русский</strong>» и «<strong>российский</strong>» действительно похожи, но у них разное значение и употребление.</p>
   
     <div class="block">
@@ -150,8 +147,8 @@
       'task2_1', 'task2_2', 'task2_3', 'task2_4',
       'task2_5', 'task2_6'
     ])">Проверить ответы</button>
-   
-    
+
+
       <h2>Задание 3: Перевод предложений</h2>
     
       <div class="task-item">
@@ -182,12 +179,21 @@
 </div>
 
   </main>
-  
+
 
   <div class="bottom-nav">
     <a href="index.html" class="active">📚</a>
     <a href="filword.html">🎮</a>
     <a href="profil.html">👤</a>
   </div>
+
+  <div id="result-modal" class="result-modal hidden">
+    <div class="result-content">
+      <span id="result-close">&times;</span>
+      <p id="result-text"></p>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
 </body>
 </html>

@@ -99,6 +99,25 @@
     <a href="profil.html">👤</a>
     <a href="ulubione.html">❤️</a>
   </nav>
-  
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const navLinks = document.querySelectorAll('.bottom-nav a');
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+
+        navLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          if (href === currentPath) {
+            link.classList.add('active');
+          }
+
+          link.addEventListener('click', () => {
+            navLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+          });
+        });
+      });
+    </script>
+
 </body>
+
 </html>

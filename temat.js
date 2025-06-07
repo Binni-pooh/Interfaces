@@ -8,7 +8,7 @@ const correctAnswers = {
     task1_6: "российской",
     task1_7: "русский",
     task1_8: "российском",
-  
+
     // Вправа 2
     task2_1: "русскую",
     task2_2: "Российской",
@@ -16,7 +16,7 @@ const correctAnswers = {
     task2_4: "российском",
     task2_5: "российской",
     task2_6: "Российское",
-  
+
     // Вправа 3
     task3_1: "В России много разных народов, но все они являются частью российской нации.",
     task3_2: "Он работает в российской компании.",
@@ -75,7 +75,7 @@ const correctAnswers = {
     task31_8: "жрал",           // Відповідь до восьмого пропуску
     task31_9: "девчонка",       // Відповідь до дев'ятого пропуску
     task31_10: "чувак",
-    
+
     task41_1: "вешает лапшу на уши",
     task41_2: "на седьмом небе от счастья",
     task41_3: "бил баклуши",
@@ -143,11 +143,11 @@ const correctAnswers = {
     task81_9: "прошло",
     task81_10: "уходим",
 
-    task91_1: "Он уехал на выходные.",
-    task91_2: "В итоге мы решили не идти.",
-    task91_3: "Я подумал, что так лучше.",
-    task91_4: "Это не моё дело.",
-    task91_5: "Мы пошли домой.",
+    task91_1: "Он уехал на выходные",
+    task91_2: "В итоге мы решили не идти",
+    task91_3: "Я подумал, что так лучше",
+    task91_4: "Это не моё дело",
+    task91_5: "Мы пошли домой",
 
     task101_1: "ведёт",
     task101_2: "повёл",
@@ -157,31 +157,89 @@ const correctAnswers = {
     task101_6: "заведение"
 
   };
-  
-  function checkAnswers(taskIds) {
-    let correctCount = 0;
-  
-    taskIds.forEach(taskId => {
-      const inputField = document.getElementById(taskId);
-      if (!inputField) return;
-  
-      const userAnswer = inputField.value.trim().toLowerCase();
-      const correctAnswer = (correctAnswers[taskId] || "").trim().toLowerCase();
-  
-      inputField.classList.remove("correct", "incorrect");
-  
-      if (userAnswer === correctAnswer) {
-        inputField.classList.add("correct");
-        correctCount++;
-      } else {
-        inputField.classList.add("incorrect");
-      }
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('go-home').addEventListener('click', () => {
+        window.location.href = "index.html";
     });
-  
-    alert(`Правильных ответов: ${correctCount} из ${taskIds.length}`);
-  }
+});
+
+function checkAnswers(taskIds) {
+    let correctCount = 0;
+
+    taskIds.forEach(taskId => {
+        const inputField = document.getElementById(taskId);
+        if (!inputField) return;
+
+        const userAnswer = inputField.value.trim().toLowerCase();
+        const correctAnswer = (correctAnswers[taskId] || "").trim().toLowerCase();
+
+        inputField.classList.remove("correct", "incorrect");
+
+        if (userAnswer === correctAnswer) {
+            inputField.classList.add("correct");
+            correctCount++;
+        } else {
+            inputField.classList.add("incorrect");
+        }
+    });
+
+    if (correctCount > taskIds.length / 2) {
+        // Показываем конфетти
+        confetti({
+            particleCount: 300,       // увеличить количество частиц (было 150)
+            spread: 100,              // увеличить разлет частиц (было 70)
+            origin: { y: 0.6 },
+            scalar: 1.5,              // увеличить размер частиц (по умолчанию 1)
+            ticks: 400                // увеличить время жизни частиц (по умолчанию ~200)
+        });
+
+    }
+
+    showResultModal(`Prawidłowych odpowiedzi: ${correctCount} z ${taskIds.length}`);
+}
+
+// Функція показу модалки з результатом і автоматичним схованням через 10 секунд
+function showResultModal(message) {
+    const modal = document.querySelector('.result-modal');
+    const resultContent = modal.querySelector('.result-content');
+
+    if (!modal || !resultContent) return;
+
+    // Встановлюємо текст результату
+    resultContent.textContent = message;
+
+    modal.classList.remove('hidden');  // показати модалку
+    modal.style.opacity = '1';
+
+    // Автоматично ховаємо модалку через 10 секунд
+    setTimeout(() => {
+        modal.style.opacity = '0';
+        modal.classList.add('hidden');
+        resultContent.textContent = ''; // очищаємо текст після сховання
+    }, 10000);
+}
+
+// Закриття модалки по кнопці "×"
+document.getElementById('result-close').addEventListener('click', () => {
+    const modal = document.querySelector('.result-modal');
+    const resultContent = modal.querySelector('.result-content');
+    modal.classList.add('hidden');
+    modal.style.opacity = '0';
+    resultContent.textContent = '';
+});
+
+// Закриття модалки по кліку поза вмістом
+document.querySelector('.result-modal').addEventListener('click', e => {
+    if (e.target.classList.contains('result-modal')) {
+        e.target.classList.add('hidden');
+        e.target.style.opacity = '0';
+        e.target.querySelector('.result-content').textContent = '';
+    }
+});
+
   const translations = document.querySelectorAll('.translation');
-const words = document.querySelectorAll('.word');
+const words = document.querySelectorAll('.word ');
 let draggedItem = null;
 
 // Коли починаємо перетягувати
@@ -218,6 +276,7 @@ function checkWin() {
     if (matched === 10) {
         document.getElementById('result').textContent = '🎉 Молодец! Все правильно!';
     }
+
 }
 
-  
+

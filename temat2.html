@@ -8,10 +8,11 @@
     <script src="temat.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Самка, Самец и Детёныш</h1>
-    </header>
-<main>
+<button id="go-home" class="go-home-btn">🏠 Powrót na stronę główną</button>
+<div class="top-bar">
+    <h1>Самка, Самец и Детёныш</h1>
+</div>
+
     <section class="theory">
         <h2>Теория</h2>
         <p>Самка, самец и детёныш — это слова, которые указывают на пол и возраст животных.</p>
@@ -201,5 +202,14 @@
         <a href="filword.html">🎮</a>
         <a href="profil.html">👤</a>
       </div>
+
+<div id="result-modal" class="result-modal hidden">
+    <div class="result-content">
+        <span id="result-close">&times;</span>
+        <p id="result-text"></p>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
 </body>
 </html>

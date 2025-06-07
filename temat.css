@@ -293,3 +293,69 @@ body {
   color: green;
 }
 
+.result-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.result-modal.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.result-content {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  max-width: 320px;
+  width: 90%;
+  position: relative;
+  font-size: 20px;
+  color: #1e40af;
+  font-weight: 600;
+}
+
+#result-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #666;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s;
+}
+
+#result-close:hover {
+  color: #1e40af;
+}
+.go-home-btn {
+  position: fixed;
+  top: 20px;         /* відступ зверху */
+  right: 20px;       /* відступ справа замість зліва */
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: background-color 0.2s ease;
+}
+
+.go-home-btn:hover {
+  background-color: #1d4ed8;
+}
+

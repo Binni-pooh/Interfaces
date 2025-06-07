@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Profil</title>
     <link rel="stylesheet" href="uzytkownik.css">
-    <script src="script.js" ></script>
 </head>
 <body>
 <div class="top-right-streak">
@@ -18,20 +17,65 @@
 </div>
 
 <div class="bottom-nav">
-    <a href="index.html">📚</a>
+    <a href="index.html">🏠</a>
     <a href="filword.html">🎮</a>
-    <a href="profil.html" class="active">👤</a>
+    <a href="profil.html" class="active">👤</a> <!-- USUNIĘTO class="active" -->
+    <a href="ulubione.html">❤️</a>
 </div>
 
-
 <script>
-    document.getElementById("profileEmail").textContent = localStorage.getItem("userEmail");
-    document.getElementById("daysCount").textContent = getStreakDays();
-
     function logout() {
         localStorage.clear();
         window.location.href = "login.html";
     }
+
+    function getStreakDays() {
+        let firstDay = localStorage.getItem("firstDay");
+        if (!firstDay) {
+            const today = new Date().toISOString().split("T")[0];
+            localStorage.setItem("firstDay", today);
+            return 1;
+        }
+        const today = new Date();
+        const start = new Date(firstDay);
+        return Math.floor((today - start) / (1000 * 60 * 60 * 24)) + 1;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // Ustaw email
+        const emailEl = document.getElementById("profileEmail");
+        if (emailEl) {
+            emailEl.textContent = localStorage.getItem("userEmail");
+        }
+
+        // Ustaw liczbę dni (streak)
+        const streakEl = document.getElementById("daysCount");
+        if (streakEl) {
+            streakEl.textContent = getStreakDays();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.bottom-nav a');
+            const currentPath = window.location.pathname.split('/').pop().toLowerCase();
+
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href').toLowerCase();
+                if (href === currentPath) {
+                    link.classList.add('active'); // tylko na aktualnej stronie
+                }
+            });
+
+            // Ustaw dane profilu
+            const emailEl = document.getElementById("profileEmail");
+            if (emailEl) {
+                emailEl.textContent = localStorage.getItem("userEmail") || "Brak";
+            }
+
+            const streakEl = document.getElementById("daysCount");
+            if (streakEl) {
+                streakEl.textContent = getStreakDays();
+            }
+        });
 </script>
 </body>
 </html>

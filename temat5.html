@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--suppress XmlDuplicatedId -->
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +9,7 @@
     <title>Сложное спряжение глаголов</title>
 </head>
 <body>
+<button id="go-home" class="go-home-btn">🏠 Powrót na stronę główną</button>
     <div class="top-bar">
         <h1>Сложное спряжение глаголов</h1>
     </div>
@@ -148,6 +150,13 @@
         </div>
     </div>
     </main>
-    
+    <div id="result-modal" class="result-modal hidden">
+        <div class="result-content">
+            <span id="result-close">&times;</span>
+            <p id="result-text"></p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
 </body>
 </html>

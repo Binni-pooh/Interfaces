@@ -100,13 +100,15 @@ input:focus {
 
 .bottom-nav a {
   font-size: 26px;
-  color: #000;
+  color: black;
   text-decoration: none;
+  transition: transform 0.2s ease;
+  margin: 0 10px;
 }
 
 .bottom-nav a.active {
-  font-weight: bold;
-  color: #1e40af;
+  transform: scale(2);
+  color: #007bff;
 }
 
 .top-right-streak {

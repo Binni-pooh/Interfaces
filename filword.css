@@ -64,4 +64,26 @@ body {
   .back-button:hover {
     background-color: #42a5f5;
   }
-  
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+}
+
+.bottom-nav a {
+  font-size: 26px;
+  color: black;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.bottom-nav a.active {
+  transform: scale(2); /* POWIĘKSZENIE aktywnej ikony */
+  color: #007bff;      /* Opcjonalnie: niebieski kolor dla aktywnej */
+}
