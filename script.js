@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
   function updateProgress() {
     const total = 7; // całkowita liczba tematów (możesz to dynamicznie zmieniać)
     const learned = 2; // liczba zakończonych tematów (też możesz zrobić dynamicznie)

@@ -263,28 +263,38 @@ body {
   gap: 50px;
 }
 
+.word, .translation {
+  background-color: #f1f5f9;
+  margin: 8px 0;
+  border-radius: 8px;
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  max-width: 100%;
+  width: 100%;
+  min-height: 40px;
+  height: 40px; /* однакова висота */
+  padding: 0 12px;
+  box-sizing: border-box;
+  gap: 8px; /* відступ між словом і перекладом */
+  text-align: center;
+  overflow: hidden; /* не дозволяє розтягуватись */
+  text-align: left;
+}
+
 .words, .translations {
   width: 45%;
 }
 
-.word, .translation {
-  background-color: #f1f5f9;
-  padding: 10px;
-  margin: 8px 0;
-  border-radius: 8px;
-  cursor: grab;
-  text-align: center;
-}
-
 .word {
-  min-height: 15px;
   border: 2px dashed #94a3b8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
 }
 
 #result {
+  height: 25px;
   margin-top: 20px;
   font-size: 24px;
   font-weight: bold;
