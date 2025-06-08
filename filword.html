@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Филворд – Игра</title>
     <link rel="stylesheet" href="filword.css" />
+    <script src="streak.js"></script>
 </head>
 <body>
     <div class="top-right-streak">
@@ -23,28 +24,6 @@
 
     <!-- Łączymy osobny plik JS -->
     <script src="filword.js"></script>
-    <script>
-        function getStreakDays() {
-            let firstDay = localStorage.getItem("firstDay");
-            if (!firstDay) {
-                const today = new Date().toISOString().split("T")[0];
-                localStorage.setItem("firstDay", today);
-                return 1;
-            }
-            const today = new Date();
-            const start = new Date(firstDay);
-            return Math.floor((today - start) / (1000 * 60 * 60 * 24)) + 1;
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            // Ustaw liczbę dni (streak)
-            const streakEl = document.getElementById("daysCount");
-            if (streakEl) {
-                streakEl.textContent = getStreakDays();
-            }
-        });
-
-    </script>
 
 </body>
 </html>

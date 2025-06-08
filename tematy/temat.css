@@ -4,8 +4,8 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(135deg, #E5F5FB, #A4C5EF) fixed;
 }
-  
-  .top-bar {
+
+.top-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,30 +14,30 @@ body {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     box-shadow: none;
-  }
-  
-  .top-bar h1 {
+}
+
+.top-bar h1 {
     margin: 0;
     font-size: 24px;
     color: #000;
-  }
-  
-  .settings-btn {
+}
+
+.settings-btn {
     font-size: 24px;
     background: none;
     border: none;
     cursor: pointer;
-  }
-  
-  /* Кафельні елементи для тем */
-  .tematy-container {
+}
+
+/* Кафельні елементи для тем */
+.tematy-container {
     display: flex;
     flex-direction: column;
     padding: 20px;
     gap: 15px;
-  }
-  
-  .temat-kafel {
+}
+
+.temat-kafel {
     background-color: #ffffff;
     padding: 16px 20px;
     border-radius: 16px;
@@ -47,23 +47,23 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: 0.2s;
-  }
-  
-  .temat-kafel:hover {
+}
+
+.temat-kafel:hover {
     background-color: #f0f9ff;
-  }
-  
-  .temat-kafel .emoji {
+}
+
+.temat-kafel .emoji {
     margin-right: 12px;
     font-size: 24px;
-  }
-  
-  main {
+}
+
+main {
     padding-bottom: 70px; /* Встановлюємо відступ знизу, враховуючи висоту нижньої навігації */
-  }
-  
-  /* Нижня навігація */
-  .bottom-nav {
+}
+
+/* Нижня навігація */
+.bottom-nav {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -75,21 +75,21 @@ body {
     height: 60px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-  }
-  
-  .bottom-nav a {
+}
+
+.bottom-nav a {
     font-size: 26px;
     color: #000;
     text-decoration: none;
-  }
-  
-  .bottom-nav a.active {
+}
+
+.bottom-nav a.active {
     font-weight: bold;
     color: #1e40af;
-  }
-  
-  /* Лічильник */
-  .top-right-streak {
+}
+
+/* Лічильник */
+.top-right-streak {
     position: fixed;
     top: 12px;
     right: 20px;
@@ -100,9 +100,9 @@ body {
     font-size: 16px;
     font-weight: 500;
     z-index: 1000;
-  }
+}
 
-  .theory {
+.theory {
     max-width: 900px;
     margin: 20px auto;
     padding: 20px;
@@ -112,8 +112,8 @@ body {
     color: #1a1a1a;
     text-align: justify;
 }
-  
-  /* Спільні стилі для тексту в темах */
+
+/* Спільні стилі для тексту в темах */
 .tekst {
     padding: 20px;
     line-height: 1.8; /* Трохи збільшений міжрядковий інтервал для легкого читання */
@@ -133,44 +133,44 @@ body {
     color: #1e40af;
 }
 
-  table, th, td {
+table, th, td {
     border: 1px solid #ddd;
-  }
-  
-  th, td {
+}
+
+th, td {
     padding: 8px;
     text-align: left;
-  }
-  
-  th {
+}
+
+th {
     background-color: #f4f4f4;
-  }
-  
-  table tbody tr:hover {
+}
+
+table tbody tr:hover {
     background-color: #f9f9f9;
-  }
-  
-  /* Секція з практичним завданням */
-  .practice {
+}
+
+/* Секція з практичним завданням */
+.practice {
     padding: 20px;
     background-color: #ffffff;
     border-radius: 16px;
     margin: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .practice h2 {
+}
+
+.practice h2 {
     margin-bottom: 16px;
     color: #1e40af;
-  }
-  
-  /* Кожне завдання */
-  .task-item {
+}
+
+/* Кожне завдання */
+.task-item {
     margin-bottom: 15px;
-  }
-  
-  /* Стиль інпутів */
-  .task-item input[type="text"] {
+}
+
+/* Стиль інпутів */
+.task-item input[type="text"] {
     border: 2px solid #ccc;
     border-radius: 12px;
     padding: 8px 12px;
@@ -179,21 +179,21 @@ body {
     transition: border-color 0.3s, box-shadow 0.3s;
     width: 200px;
     margin-left: 6px;
-  }
-  
-  /* При правильній відповіді */
-  .task-item input[type="text"].correct {
+}
+
+/* При правильній відповіді */
+.task-item input[type="text"].correct {
     border: 3px solid #00FF00;
     box-shadow: 0 0 10px #00FF00;
-  }
-  
-  /* При неправильній відповіді */
-  .task-item input[type="text"].incorrect {
+}
+
+/* При неправильній відповіді */
+.task-item input[type="text"].incorrect {
     border: 3px solid red;
     box-shadow: 0 0 10px red;
-  }
-  
-  /* Кнопка перевірки */
+}
+
+/* Кнопка перевірки */
 .practice button {
     padding: 10px 20px;
     font-size: 16px;
@@ -204,13 +204,13 @@ body {
     cursor: pointer;
     transition: background-color 0.3s;
     margin-top: 20px;
-  }
-  
-  .practice button:hover {
+}
+
+.practice button:hover {
     background-color: #3b82f6;
-  }
-  
-  .next-topic1 {
+}
+
+.next-topic1 {
     text-align: right;
     margin: 40px 20px 0 0; /* відступи: верх 40px, правий 20px, низ 0, лівий 0 */
 }
@@ -231,140 +231,138 @@ body {
 }
 
 .topics-container {
-  display: flex;
-  justify-content: space-between; /* Розподіляє кнопки по краях */
-  align-items: center; /* Вирівнює кнопки по вертикалі */
-  margin: 20px;
+    display: flex;
+    justify-content: space-between; /* Розподіляє кнопки по краях */
+    align-items: center; /* Вирівнює кнопки по вертикалі */
+    margin: 20px;
 }
 
 .prev-topic, .next-topic {
-  margin: 0; /* Прибираємо відступи з боків */
+    margin: 0; /* Прибираємо відступи з боків */
 }
 
 .prev-button, .next-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #1e40af;
-  color: white;
-  font-size: 18px;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.3s;
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #1e40af;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
 }
 
 .prev-button:hover, .next-button:hover {
-  background-color: #3749db;
+    background-color: #3749db;
 }
 
 .matching-game {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  gap: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 50px;
 }
 
 .word, .translation {
-  background-color: #f1f5f9;
-  margin: 8px 0;
-  border-radius: 8px;
-  cursor: grab;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 160px;
-  max-width: 100%;
-  width: 100%;
-  min-height: 40px;
-  height: 40px; /* однакова висота */
-  padding: 0 12px;
-  box-sizing: border-box;
-  gap: 8px; /* відступ між словом і перекладом */
-  text-align: center;
-  overflow: hidden; /* не дозволяє розтягуватись */
-  text-align: left;
+    background-color: #f1f5f9;
+    margin: 8px 0;
+    border-radius: 8px;
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 160px;
+    max-width: 100%;
+    min-height: 40px;
+    height: 40px; /* однакова висота */
+    padding: 0 12px;
+    box-sizing: border-box;
+    gap: 8px; /* відступ між словом і перекладом */
+    text-align: center;
+    overflow: hidden; /* не дозволяє розтягуватись */
 }
 
 .words, .translations {
-  width: 45%;
+    width: 45%;
 }
 
 .word {
-  border: 2px dashed #94a3b8;
-  position: relative;
+    border: 2px dashed #94a3b8;
+    position: relative;
 }
 
 #result {
-  height: 25px;
-  margin-top: 20px;
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-  color: green;
+    height: 25px;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: green;
 }
 
 .result-modal {
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10000;
-  opacity: 1;
-  transition: opacity 0.3s ease;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
 .result-modal.hidden {
-  opacity: 0;
-  pointer-events: none;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .result-content {
-  background: white;
-  padding: 30px 40px;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  max-width: 320px;
-  width: 90%;
-  position: relative;
-  font-size: 20px;
-  color: #1e40af;
-  font-weight: 600;
+    background: white;
+    padding: 30px 40px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    max-width: 320px;
+    width: 90%;
+    position: relative;
+    font-size: 20px;
+    color: #1e40af;
+    font-weight: 600;
 }
 
 #result-close {
-  position: absolute;
-  top: 12px;
-  right: 14px;
-  font-size: 28px;
-  font-weight: bold;
-  color: #666;
-  cursor: pointer;
-  user-select: none;
-  transition: color 0.3s;
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s;
 }
 
 #result-close:hover {
-  color: #1e40af;
+    color: #1e40af;
 }
 .go-home-btn {
-  position: fixed;
-  top: 20px;         /* відступ зверху */
-  right: 20px;       /* відступ справа замість зліва */
-  padding: 10px 16px;
-  font-size: 16px;
-  font-weight: 500;
-  background-color: #2563eb;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  transition: background-color 0.2s ease;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: background-color 0.2s ease;
 }
 
 .go-home-btn:hover {
-  background-color: #1d4ed8;
+    background-color: #1d4ed8;
 }
 

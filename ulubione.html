@@ -1,46 +1,33 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ulubione tematy</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="ulubione.js" defer></script> <!-- Підключаємо JS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulubione tematy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="ulubione.js" defer></script>
+    <script src="streak.js" defer></script>
 </head>
 <body class="home">
-  
-  <header class="top-bar">
+
+    <div class="top-right-streak">
+        🔥 <span id="daysCount">0</span>
+    </div>
+
+<header class="top-bar">
     <h1>Ulubione</h1>
-  </header>
+</header>
 
-  <main id="favoritesContainer" class="tematy-container">
+<main id="favoritesContainer" class="tematy-container">
     <!-- Сюди додадуться улюблені теми -->
-  </main>
+</main>
 
-  <nav class="bottom-nav">
+<nav class="bottom-nav">
     <a href="index.html">🏠</a>
     <a href="filword.html">🎮</a>
     <a href="profil.html">👤</a>
-    <a href="ulubione.html">❤️</a>
-  </nav>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const navLinks = document.querySelectorAll('.bottom-nav a');
-      const currentPath = window.location.pathname.split('/').pop() || 'ulubione.html';
-
-      navLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        if (href === currentPath) {
-          link.classList.add('active');
-        }
-
-        link.addEventListener('click', () => {
-          navLinks.forEach(l => l.classList.remove('active'));
-          link.classList.add('active');
-        });
-      });
-    });
-  </script>
+    <a href="ulubione.html" class="active">❤️</a>
+</nav>
 
 </body>
 </html>
